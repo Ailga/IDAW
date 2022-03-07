@@ -1,9 +1,38 @@
 ul{
-    display:block;
-    background-color: lightgreen
+    display:flexbox;
+    max-width: 125px;
+    list-style-type:none;
+    font-family: 'Lucida Grande', serif;
+    background-color: lightgreen;
+    color: black
+}
+
+h1{
+    font-size: 24px;
+    font-family: 'Lucida Grande', serif;
+    color: darkgreen
+}
+
+h2{
+    font-size: 20px;
+    font-family: 'Lucida Grande', serif;
+    color:forestgreen
+}
+
+h3{
+    font-size: 20px;
+    font-family: 'Lucida Grande', serif;
+    color: mediumseagreen;
 }
 
 p{
-    color:teal;
-    font-family: "Times New Roman", serif
+    font-family: "Lucida Grande", serif
+}
+
+.pied{
+    color:rgb(47, 122, 66)
+}
+
+#currentpage a{
+    color:rgb(7, 97, 15)
 }
