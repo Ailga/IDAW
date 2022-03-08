@@ -1,6 +1,7 @@
-ul{
+.menu{
     display:flexbox;
     max-width: 125px;
+    min-height: 6000px;
     list-style-type:none;
     font-family: 'Lucida Grande', serif;
     background-color: lightgreen;
