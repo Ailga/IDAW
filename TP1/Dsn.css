@@ -1,0 +1,39 @@
+.menu{
+    display:flexbox;
+    max-width: 125px;
+    min-height: 6000px;
+    list-style-type:none;
+    font-family: 'Lucida Grande', serif;
+    background-color: lightgreen;
+    color: black
+}
+
+h1{
+    font-size: 24px;
+    font-family: 'Lucida Grande', serif;
+    color: darkgreen
+}
+
+h2{
+    font-size: 20px;
+    font-family: 'Lucida Grande', serif;
+    color:forestgreen
+}
+
+h3{
+    font-size: 20px;
+    font-family: 'Lucida Grande', serif;
+    color: mediumseagreen;
+}
+
+p{
+    font-family: "Lucida Grande", serif
+}
+
+.pied{
+    color:rgb(47, 122, 66)
+}
+
+#currentpage a{
+    color:rgb(7, 97, 15)
+}
