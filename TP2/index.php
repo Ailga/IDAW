@@ -19,6 +19,13 @@
         else
             require_once("error.php");
     ?>
+
+    <?php echo '<ul class="choixlang">
+                    <li><a href='Base.php'>Français</a></li>
+                    <li><a href='Basis.php'>English</a></li>
+                </ul>';
+    ?>
+
     </section>
     <?php
         require_once("template_footer.php");

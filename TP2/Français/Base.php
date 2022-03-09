@@ -3,13 +3,13 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<!-- <html>
     <head>
         <title>Accueil</title>
         <meta charset = "utf-8">
         <link rel="stylesheet" href="Desn.css">
     </head>
-
+ -->
     <!--<nav class="menu">
         <ul>
             <li id="currentpage"><a href="Base.html">Accueil</a></li>
@@ -44,7 +44,7 @@
     </body>
 
     <footer>
-        <p>Merci de m'avoir lue</p>
+        <!--<p>Merci de m'avoir lue</p>-->
         <?php
             require_once('template_footer.php');
         ?>
