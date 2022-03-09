@@ -1,7 +1,3 @@
-<?php
-    require_once('template_header.php');
-?>
-
 <!DOCTYPE html>
 <!-- <html>
     <head>
@@ -43,10 +39,4 @@
                 <p>Une élève en 4ème année d'école ingénieure à l'IMT Nord Europe, anciennement Mines de Douai. Je cherche actuellement un stage pour une durée de 16 à 20 semaines entre Avril et Août 2022 dans le domaine du numérique.</p>    
     </body>
 
-    <footer>
-        <!--<p>Merci de m'avoir lue</p>-->
-        <?php
-            require_once('template_footer.php');
-        ?>
-    </footer>
 </html>

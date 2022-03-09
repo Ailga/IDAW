@@ -8,25 +8,31 @@
             $currentPageId = $_GET['page'];
         }
     ?>
-    <?php
-        renderMenuToHTML($currentPageId);
-    ?>
+
     <section class="corps">
     <?php
-        $pageToInclude = $currentPageId . ".php";
-        if(is_readable($pageToInclude))
+        if (is_readable("fr/". $currentPageId . ".php")){
+            $pageToInclude = "fr/" . $currentPageId . ".php";
+            renderMenuToHTML($currentPageId);
+        }else {
+            $pageToInclude = "en/" . $currentPageId . ".php";
+            renderMenuToHTMLen($currentPageId);
+        }
+        if(is_readable($pageToInclude)){
             require_once($pageToInclude);
-        else
+        }else{
             require_once("error.php");
+        }
     ?>
-
-    <?php echo '<ul class="choixlang">
-                    <li><a href='Base.php'>Français</a></li>
-                    <li><a href='Basis.php'>English</a></li>
-                </ul>';
-    ?>
-
     </section>
+
+    <body>
+        <ul class="choixlang">
+            <li><a href='index.php?page=Base'>Français</a></li>
+            <li><a href='index.php?page=Basis'>English</a></li>
+        </ul>
+    </body>
+
     <?php
         require_once("template_footer.php");
     ?>
