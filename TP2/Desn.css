@@ -8,6 +8,7 @@
     background-color: rgb(99, 250, 99);
     color: black;
     font-size: 18px;
+    position: fixed;
 }
 
 body{

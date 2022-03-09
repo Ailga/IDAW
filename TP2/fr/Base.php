@@ -1,21 +1,5 @@
 <!DOCTYPE html>
-<!-- <html>
-    <head>
-        <title>Accueil</title>
-        <meta charset = "utf-8">
-        <link rel="stylesheet" href="Desn.css">
-    </head>
- -->
-    <!--<nav class="menu">
-        <ul>
-            <li id="currentpage"><a href="Base.html">Accueil</a></li>
-            <li><a href="Motivation.html">Motivations</a></li>
-            <li><a href="Parcours.html">Parcours</a></li>
-            <li><a href="Competences.html">Compétences</a></li>
-            <li><a href="Contacts.html">Contacts</a></li>
-        </ul>
-    </nav>-->
-
+<html>
     <body>
         <h1>Gaëlle Erhart</h1>
             <h2>Une courte présentation</h2>

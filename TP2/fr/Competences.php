@@ -1,32 +1,12 @@
 <!DOCTYPE html>
 
-<?php
-    require_once('template_header.php');
-    require_once('template_menu.php');
-?>
-
 <html>
-    <head>
-        <title>Compétences</title>
-        <meta charset = "utf-8">
-        <link rel="stylesheet" href="Desn.css">
-    </head>
-    
-    <!--<nav class="menu">
-        <ul>
-            <li><a href="Base.html">Accueil</a></li>
-            <li><a href="Motivation.html">Motivations</a></li>
-            <li><a href="Parcours.html">Parcours</a></li>
-            <li id="currentpage"><a href="Competences.html">Compétences</a></li>
-            <li><a href="Contacts.html">Contacts</a></li>
-        </ul>
-    </nav>-->
-
-
     <body>
         <h1>Mes compétences</h1>
             <h2>Langues</h2>
                 <dl>   
+                <dt>Français</dt>
+                        <dd> Langue maternelle</dd>
                     <dt>Anglais</dt>
                         <dd>
                         Score au TOEIC le 6 Novembre 2020: 980/990 <br>
@@ -40,7 +20,7 @@
                     <dt>Python, VBA, JAVA</dt>
                         <dd>Maitrisé et régulièrement utilisé</dd>
                     <dt>JAVA Script, HTML, CSS</dt>
-                        <dd>Bases acquises, reste à approfondir l'utilisation de cs langages pour être au point</dd> 
+                        <dd>Bases acquises, reste à approfondir l'utilisation de ces langages pour être au point</dd> 
                 </dl>
             <h2>Compétences générales</h2>
                 <ul>
@@ -48,10 +28,5 @@
                     <li>Communication, qu'il s'agisse de communication entre deux personnes ou de communiquer sur un sujet au sein d'une entreprise par exemple.</li>
                     <li>Design graphique numérique, gestion des outils tels que Photoshop, Procreate et Adobe Première</li>
                 </ul>
-
-            <footer>Merci de m'avoir lue</footer>
     </body>
-    <?php
-        require_once('template_footer.php');
-    ?>
 </html>

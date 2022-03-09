@@ -1,27 +1,4 @@
 <!DOCTYPE html>
-
-<?php
-    require_once('template_header.php');
-    require_once("template_menu.php");
-?>
-
-<html>
-    <head>
-        <title>Parcours</title>
-        <meta charset = "utf-8">
-        <link rel="stylesheet" href="Desn.css">
-    </head>
-
-    <!--<nav class="menu">
-        <ul>
-            <li><a href="Base.html">Accueil</a></li>
-            <li><a href="Motivation.html">Motivations</a></li>
-            <li id="currentpage"><a href="Parcours.html">Parcours</a></li>
-            <li><a href="Competences.html">Compétences</a></li>
-            <li><a href="Contacts.html">Contacts</a></li>
-        </ul>
-    </nav>-->
-
     <body>
         <h1>Mon parcours</h1>
             <h2>Mon parcours scolaire</h2>
@@ -44,11 +21,7 @@
                     </ul>
                 <h3>Emploi saisonnier - Serveuse</h2>
                     <p>J'ai travaillé en tant que serveuse dans un restaurant-pizzeria à l'Ile d'Oléron pendant l'été 2018. Cet emploi saisonnier m'a permis d'acquérir des softskills tels que la communication client, l'organisation mais aussi la réactivité. 
-                        <br>Cette expérience m'a permis de développer mon autonome et fût ma première immersion dans le monde du travail.
+                        <br>Cette expérience m'a permis de développer mon autonomie et fût ma première immersion dans le monde du travail.
                     </p>
-        <footer>Merci de m'avoir lue</footer>
     </body>
-    <?php
-        require_once('template_footer.php');
-    ?>
 </html>
