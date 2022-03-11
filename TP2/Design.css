@@ -1,58 +1,53 @@
 .menu{
     float:left;
-    width: 10%;
+    width: 12%;
     height: 1000px;
     list-style-type: none;
-    font-family: 'Lucida Grande', serif;
     background-color: rgb(99, 250, 99);
     color: black;
     font-size: 18px;
     flex:left;
 }
 
+*{font-family: 'Lucida Grande', serif;}
+
 body{
     background-color: rgb(176, 231, 176);
 }
 
+body> ul{
+    font-size: 15px;
+    margin-left: 200px; 
+}
+
 h1{
     font-size: 24px;
-    font-family: 'Lucida Grande', serif;
     color: darkgreen
 }
 
 h2{
     font-size: 20px;
-    font-family: 'Lucida Grande', serif;
     color:forestgreen
 }
 
 h3{
     font-size: 20px;
-    font-family: 'Lucida Grande', serif;
     color: rgb(50, 158, 68);
 }
 
 dt{
     font-size: 18px;
-    font-family: "Lucida Grande", serif;
     color:rgb(50, 158, 68)
 }
 
 dd{
     font-size: 15px;
-    font-family: "Lucida Grande",serif;
-}
-
-ul{
-    font-size: 15px;
-    font-family: "Lucida Grande",serif;
 }
 
 ol{
     margin-left: 150px;
 }
 p{
-    font-family: "Lucida Grande", serif;
     font-size: 15px;
 }
 
