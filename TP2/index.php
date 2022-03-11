@@ -25,13 +25,23 @@
         }
     ?>
     </section>
-
-    <body>
-        <ul class="choixlang">
-            <li><a href='index.php?page=Base'>Français</a></li>
-            <li><a href='index.php?page=Basis'>English</a></li>
-        </ul>
-    </body>
+    
+    <?php
+    echo "<body>";
+        $mypage = array(
+            'Basis' => 'Base',
+            'Motives' => 'Motivation',
+            'Course' => 'Parcours',
+            'Abilities' => 'Competences',
+            'Contact' => 'Contacts'
+            );
+        if (is_readable("fr/". $currentPageId . ".php")){
+            echo "<a href='index.php?page=" . array_search($currentPageId, $mypage) . "'>Translate in English</a>";
+        }else{  
+            echo "<a href='index.php?page=". $mypage[$currentPageId] . "'>Traduire en Français</a>";
+        }
+        echo "</body>";
+    ?>
 
     <?php
         require_once("template_footer.php");

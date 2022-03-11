@@ -1,5 +1,4 @@
 .menu{
-    display:flex;
     float:left;
     width: 10%;
     height: 1000px;
@@ -8,7 +7,7 @@
     background-color: rgb(99, 250, 99);
     color: black;
     font-size: 18px;
-    position: fixed;
+    flex:left;
 }
 
 body{
@@ -30,13 +29,13 @@ h2{
 h3{
     font-size: 20px;
     font-family: 'Lucida Grande', serif;
-    color: mediumseagreen;
+    color: rgb(50, 158, 68);
 }
 
 dt{
     font-size: 18px;
     font-family: "Lucida Grande", serif;
-    color:mediumseagreen
+    color:rgb(50, 158, 68)
 }
 
 dd{
@@ -66,4 +65,8 @@ footer{
     font-size: 19px;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+.choixlang{
+    margin-right: 200px;
 }
