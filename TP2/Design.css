@@ -27,17 +27,20 @@ h1{
 
 h2{
     font-size: 20px;
-    color:forestgreen
+    color:forestgreen;
+    margin-left: 50px;
 }
 
 h3{
     font-size: 20px;
     color: rgb(50, 158, 68);
+    margin-left: 100px;
 }
 
 dt{
     font-size: 18px;
-    color:rgb(50, 158, 68)
+    color:rgb(50, 158, 68);
+    margin-left: 150px
 }
 
 dd{
@@ -45,7 +48,7 @@ dd{
 }
 
 ol{
-    margin-left: 150px;
+    margin-left: 200px;
 }
 p{
     font-size: 15px;
