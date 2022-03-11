@@ -26,8 +26,13 @@
     </form>-->
     <header> 
         <title>Gaëlle ERHART</title>
-        <link rel=stylesheet href="Design.css" type="text/css"
-        media="screen" title="default" charset="utf-8"/>
+        <?php
+            if(isset($_COOKIE['style'])){
+                echo "<link rel=stylesheet href=" .$_COOKIE['style'] . ".css type='text/css' 
+                media='screen' title='default' charset='utf-8'/>";
+            }else
+                echo "<link rel=stylesheet href='style1.css' type='text/css' media='screen' title='default' charset='utf-8'/>";
+        ?>
     </header>
     <form id="style_form" action="login.php" method="GET">
         <select name="css">
