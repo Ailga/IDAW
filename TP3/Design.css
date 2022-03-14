@@ -1,0 +1,70 @@
+.menu{
+    float:left;
+    width: 12%;
+    height: 1000px;
+    list-style-type: none;
+    background-color: rgb(99, 250, 99);
+    color: black;
+    font-size: 18px;
+    flex:left;
+}
+
+*{font-family: 'Lucida Grande', serif;}
+
+body{
+    background-color: rgb(176, 231, 176);
+}
+
+body> ul{
+    font-size: 15px;
+    margin-left: 200px; 
+}
+
+h1{
+    font-size: 24px;
+    color: darkgreen
+}
+
+h2{
+    font-size: 20px;
+    color:forestgreen;
+    margin-left: 50px;
+}
+
+h3{
+    font-size: 20px;
+    color: rgb(50, 158, 68);
+    margin-left: 100px;
+}
+
+dt{
+    font-size: 18px;
+    color:rgb(50, 158, 68);
+    margin-left: 150px
+}
+
+dd{
+    font-size: 15px;
+}
+
+ol{
+    margin-left: 200px;
+}
+p{
+    font-size: 15px;
+}
+
+footer{
+    color:rgb(47, 122, 66)
+}
+
+#currentpage a{
+    color:rgb(7, 97, 15);
+    font-size: 19px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.choixlang{
+    margin-right: 200px;
+}

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<?php 
+<?php
+    session_start();
     if (isset($_GET['css'])){
         $styleform = $_GET['css'];
         setcookie('style',$styleform);
     }else 
         setcookie('style','style1')
-    
 ?>
 <html>
-    <!--<form id="login_form" action="connected.php" method="POST">
+    <form id="login_form" action="index.php" method="POST">
         <table>
             <tr>
                 <th>Login :</th>
@@ -23,11 +23,15 @@
                 <td><input type="submit" value="Se connecter..." /></td>
             </tr>
         </table>
-    </form>-->
+    </form>
     <header> 
         <title>Gaëlle ERHART</title>
         <?php
-            if(isset($_COOKIE['style'])){
+            if (isset($_GET['css'])){
+                echo "<link rel=stylesheet href=" .$_GET['css'] . ".css type='text/css' 
+                media='screen' title='default' charset='utf-8'/>";
+            }
+            elseif(isset($_COOKIE['style'])){
                 echo "<link rel=stylesheet href=" .$_COOKIE['style'] . ".css type='text/css' 
                 media='screen' title='default' charset='utf-8'/>";
             }else
@@ -44,11 +48,15 @@
 
     <body>
         <?php
-            if(isset($_COOKIE['style'])){
+            if(isset($GET['css'])){
+                echo 'Votre votre style prédéfini est le ' .$_GET['css'];
+            }
+            elseif(isset($_COOKIE['style'])){
                 echo 'Votre votre style prédéfini est le ' .$_COOKIE['style'];
             } else 
             echo 'Votre style prédéfini est celui par défaut';
         ?>
     </body>
-   
+
+    
 </html>
