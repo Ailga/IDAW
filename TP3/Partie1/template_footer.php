@@ -1,4 +1,3 @@
-<html>
 <?php
         require_once("template_header.php");
         require_once("template_menu.php");
@@ -15,6 +14,6 @@
         echo "<p> Thank you for reading me</p>";
     }
 ?>
+    <a href='deco.php'>Déconnexion</a>
 
     </footer>
-</html>
