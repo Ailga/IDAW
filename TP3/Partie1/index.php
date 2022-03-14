@@ -2,17 +2,25 @@
 <html>
     <?php
         session_start();
-
-        $users = array(
-        'riri' => 'fifi',
-        'yoda' => 'maitrejedi' );
+        require_once('testConnexion.php');
+        $tab=array();
+        foreach($infos as $id=>$donnees){
+            foreach($donnees as $clé=>$valeur){
+                if($clé=='login'){
+                    $log=$valeur;
+                }
+                elseif($clé=='password'){
+                    $tab["$log"]="$valeur";
+                }
+            }
+        }     
         $login = "anonymous";
         $errorText = "";
         $successfullyLogged = false;
         if(isset($_POST['login']) && isset($_POST['password'])) {
             $tryLogin=$_POST['login'];
             $tryPwd=$_POST['password'];
-                if( array_key_exists($tryLogin,$users) && $users[$tryLogin]==$tryPwd ) {
+                if( array_key_exists($tryLogin,$tab) && $tab[$tryLogin]==$tryPwd ) {
                     $successfullyLogged = true;
                     $login = $tryLogin;
                 } else

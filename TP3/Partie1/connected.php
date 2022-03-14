@@ -2,10 +2,18 @@
 
 <?php
 // on simule une base de données
-    $users = array(
-// login => password
-    'riri' => 'fifi',
-    'yoda' => 'maitrejedi' );
+    require_once('testConnexion.php');
+    $tab=array();
+    foreach($infos as $id=>$donnees){
+        foreach($donnees as $clé=>$valeur){
+            if($clé=='login'){
+                $log=$valeur;
+            }
+            elseif($clé=='password'){
+                $tab["$log"]="$valeur";
+            }
+        }
+    }        
     $login = "anonymous";
     $errorText = "";
     $successfullyLogged = false;
@@ -13,7 +21,7 @@
         $tryLogin=$_POST['login'];
         $tryPwd=$_POST['password'];
         // si login existe et password correspond
-        if( array_key_exists($tryLogin,$users) && $users[$tryLogin]==$tryPwd ) {
+        if( array_key_exists($tryLogin,$tab) && $tab[$tryLogin]==$tryPwd ) {
             $successfullyLogged = true;
             $login = $tryLogin;
         } else
