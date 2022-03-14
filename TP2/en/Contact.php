@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
     <body>
         <h1>How to contact me</h1>

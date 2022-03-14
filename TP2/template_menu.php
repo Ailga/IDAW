@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <?php
 function renderMenuToHTML($currentPageId) {
 // un tableau qui definit la structure du site

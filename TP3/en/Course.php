@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html>
     <body>
         <h1>The course I followed</h1>
             <h2>My Scolarship</h2>

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
     <body>
         <h1>Mon parcours</h1>
             <h2>Mon parcours scolaire</h2>

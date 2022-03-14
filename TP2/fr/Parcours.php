@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-    <body>
+<html>
+<body>
         <h1>Mon parcours</h1>
             <h2>Mon parcours scolaire</h2>
                 <h3>Ecole Ingénieure</h2>

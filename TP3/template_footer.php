@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<?php
-    session_start()
-?>
 <html>
 <?php
         require_once("template_header.php");
