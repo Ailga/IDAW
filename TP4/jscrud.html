@@ -1,20 +1,22 @@
 <!doctype html>
-    <html lang="fr">
-        <head>
-            <meta charset='utf-8'>
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-            <title>tabletest</title>
-            <style>
-                body{ margin-top: 5em; }
-                .table {
-                    margin-top: 100px;
-                    margin-bottom: 100px;
-                }
-            </style>
-        </head>
-        <body>
-            <table class="table">
+<html lang="fr">
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style1.css">
+        <title>tabletest</title>
+        <style>
+            body{ margin-top: 5em; }
+            .table {
+                margin-top: 100px;
+                margin-bottom: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <table border="1" align="center">
                 <thead>
                     <tr>
                         <th scope="col">Nom</th>
@@ -29,28 +31,105 @@
                 </tbody>
             </table>
             <form id="addStudentForm" action="" onsubmit="onFormSubmit();">
-            <div class="form-group row">
-                <label for="inputNom" class="col-sm-2 col-form-label">Nom*</label>
-            <div class="col-sm-3">
-<input type="text" class="form-control" id="inputNom" >
+                <div class="form-group row">
+                    <label for="inputNom" class="col-sm-2 col-form-label">Nom*</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="inputNom" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPrenom" class="col-sm-2 col-form-label">Prénom</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="inputPrenom" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputDate" class="col-sm-2 col-form-label">Date de naissance</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="inputDate" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputAimeCours" class="col-sm-2 col-form-label">Aime le cours web</label>
+                    <div class="col-sm-3">
+                        <input type="checkbox" class="form-control" id="inputAimeCours" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputRemarques" class="col-sm-2 col-form-label">Remarques</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="inputRemarques" >
+                    </div>
+                </div>
+                <!--...-->
+                <div class="form-group row">
+                    <span class="col-sm-2"></span>
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-primary form-control">Submit</button>
+                    </div>
+                </div>
+            </form>
+            <script>
+                $("#studentsTableBody").append(`<tr><td>Erhart</td><td>Gaëlle</td><td>30/07/2000</td><td>true</td><td>none</td><td><input type="button" id="editButton" value="Edit" onclick="editRow(this)"/><input type="button" id="saveButton" value="Save" onclick="saveRow(this)" style="visibility: hidden;"/><input type="button" value="Delete" onclick="deleteRow(this)"/></td></tr>`);
+                function onFormSubmit() {
+                    event.preventDefault();
+                    let nom = $("#inputNom").val();
+                    let prenom = $("#inputPrenom").val();
+                    let date = $("#inputDate").val();
+                    let aimeCours = $("#inputAimeCours").prop('checked');
+                    let remarques = $("#inputRemarques").val();
+                    if(nom.length>=1){
+                        $("#studentsTableBody").append(`<tr><td>${nom}</td><td>${prenom}</td><td>${date}</td><td>${remarques}</td><td>${aimeCours}</td><td><input type="button" id="editButton" value="Edit" onclick="editRow(this)"/><input type="button" id="saveButton" value="Save" onclick="saveRow(this)" style="visibility: hidden;"/><input type="button" value="Delete" onclick="deleteRow(this)"/></td></tr>`);
+                    }
+                    /*else*/
 
-</div>
-</div>
-...
-<div class="form-group row">
-<span class="col-sm-2"></span>
-<div class="col-sm-2">
-<button type="submit" class="btn btn-primary form-control">Submit</button>
-</div>
-</div>
-</form>
-<script>
-function onFormSubmit() {
-// prevent the form to be sent to the server
-event.preventDefault();
-let nom = $("#inputNom").val();
-$("#studentsTableBody").append(`<tr><td>${nom}</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>`);
-}
-</script>
-</body>
+                }
+                function deleteRow(btn) {
+                    var row = btn.parentNode.parentNode;
+                    row.parentNode.removeChild(row);
+                }
+                function editRow(btn) {
+                    var row = btn.parentNode.parentNode;
+                    row.childNodes[5].childNodes[0].style.visibility="hidden";
+                    row.childNodes[5].childNodes[1].style.visibility="visible";
+                    
+                    var cells = row.childNodes;
+
+                    var nom = cells[0];
+                    var valeurNom = nom.innerHTML;
+                    nom.innerHTML = "<input type='text' value='"+valeurNom+"'>";
+
+                    var prenom = cells[1];
+                    var valeurPrenom = prenom.innerHTML;
+                    prenom.innerHTML = "<input type='text' value='"+valeurPrenom+"'>";
+
+                    var date = cells[2];
+                    var valeurDate = date.innerHTML;
+                    date.innerHTML = "<input type='text' value='"+valeurDate+"'>";
+
+                    var aimeCours = cells[3];
+                    var valeurAimeCours = aimeCours.innerHTML;
+                    aimeCours.innerHTML = "<input type='text' value='"+valeurAimeCours+"'>";
+
+                    var remarques = cells[4];
+                    var valeurRemarques = remarques.innerHTML;
+                    remarques.innerHTML = "<input type='text' value='"+valeurRemarques+"'>";
+                    
+                }
+                function saveRow(btn) {
+
+                    var row = btn.parentNode.parentNode;
+                    row.childNodes[5].childNodes[0].style.visibility="visible";
+                    row.childNodes[5].childNodes[1].style.visibility="hidden";
+                    
+                    var cells = row.childNodes;
+
+                    for(k=0;k<=4;k++) {
+                        cells[k].innerHTML = cells[k].childNodes[0].value;
+                    }
+
+                }
+            </script>
+        </div>
+    </body>
 </html>
